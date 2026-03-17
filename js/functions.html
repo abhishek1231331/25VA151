@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions in javascript
+
+    </title>
+</head>
+<body>
+    <script>
+        // functions is a bblock of code design to perform specific task
+        // // types of functions with parameters without parameters and with default parameters.
+        function demo(){
+            console.log("hello","js");
+        }
+        demo();
+        function demo1(text){
+            console.log("HELLO","JS");
+        }
+        demo1("React");
+
+        function add(a,b=22){
+            var num1=a;
+            var num2=b;
+            var res=num1+num2;
+            console.log("addition of two number is" +res);
+        }
+        add(34);
+
+
+        // anoymous function is a function that does not have an identifier (name) associated 
+
+        msg1();
+        //arrow function with multiple lines
+        let msg2=(age)=>{
+            if(age>=18){
+                console.log("Valid sge");
+            }
+        }
+
+        msg2(23);
+
+        //call back functions 
+        //function is intedend to be executed later
+
+        function call(a,b){
+            var num1=a;
+            console.log("first number is " +num1);
+            var num2=b;
+            console.log("second number is " +num2);
+            var res=num1+num2;
+            callback(res);
+        }
+        function display(){
+            console.log("Result is " +res);
+
+        }
+        cal(display);
+
+        //callback using settimeout API
+
+        function greeting(){
+            console.log("Hello student");
+        }
+        function loading(){
+           document.write("Data handling");
+        }
+        loading();
+        settiemout(greeting,2000);
+        // call back 
+        let promise=new Promise(function(resolve,reject){
+         let myAge=23;
+         if(myAge>=18){
+            resolve("Valid age");
+         }
+         else{
+            reject("wait for next year");
+         }
+        }
+    );
+        promise.then(result=>console.log(result)).catch(error=>console.log(error));
+        
+    </script>
+    
+</body>
+</html>
